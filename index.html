@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Loading Screen Panel</title>
+	<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+	<!-- ============================= LOGIN GATE ============================= -->
+	<div id="login-screen">
+		<form id="login-form" class="panel login-panel">
+			<h1>Loading Screen Panel</h1>
+			<p class="hint">
+				Ingresa la clave de acceso para editar la pantalla de carga.
+				Esta clave es un token de acceso de GitHub (Personal Access
+				Token) con permiso sobre el repositorio, que te tiene que dar
+				el administrador del servidor.
+			</p>
+
+			<label class="field">
+				<span>Clave de acceso</span>
+				<input id="login-token" type="password" autocomplete="off" required />
+			</label>
+
+			<label class="checkbox-field">
+				<input id="login-remember" type="checkbox" />
+				<span>Recordar en este dispositivo</span>
+			</label>
+
+			<button type="submit" class="btn primary">Entrar</button>
+
+			<p id="login-error" class="error hidden"></p>
+		</form>
+	</div>
+
+	<!-- ============================= DASHBOARD ============================= -->
+	<div id="dashboard" class="hidden">
+		<header id="topbar">
+			<div>
+				<h1>Loading Screen Panel</h1>
+				<span id="repo-label" class="hint"></span>
+			</div>
+			<div class="topbar-actions">
+				<span id="save-status" class="hint"></span>
+				<button id="save-btn" class="btn primary" disabled>Guardar cambios</button>
+				<button id="logout-btn" class="btn ghost">Cerrar sesion</button>
+			</div>
+		</header>
+
+		<main id="content">
+			<section class="columns">
+				<div class="column editors">
+					<!-- Images -->
+					<div class="panel">
+						<h2>Imagenes (slideshow)</h2>
+						<p class="hint">Se muestran en orden, rotando de forma automatica.</p>
+						<div id="image-list" class="image-grid"></div>
+						<label class="btn secondary file-btn">
+							+ Agregar imagen
+							<input id="image-upload" type="file" accept="image/*" hidden />
+						</label>
+					</div>
+
+					<!-- Song -->
+					<div class="panel">
+						<h2>Cancion de fondo</h2>
+						<div id="song-current" class="hint">Sin cancion configurada.</div>
+						<audio id="song-preview" controls class="hidden"></audio>
+
+						<label class="field">
+							<span>Volumen (<span id="volume-value">12</span>%)</span>
+							<input id="song-volume" type="range" min="0" max="100" value="12" />
+						</label>
+
+						<label class="btn secondary file-btn">
+							Reemplazar cancion
+							<input id="song-upload" type="file" accept="audio/*" hidden />
+						</label>
+						<button id="song-remove-btn" class="btn ghost danger">Quitar cancion</button>
+					</div>
+
+					<!-- Logo -->
+					<div class="panel">
+						<h2>Logo (opcional)</h2>
+						<div id="logo-current" class="hint">Sin logo configurado.</div>
+						<img id="logo-preview" class="logo-preview hidden" alt="Logo" />
+
+						<label class="btn secondary file-btn">
+							Reemplazar logo
+							<input id="logo-upload" type="file" accept="image/*" hidden />
+						</label>
+						<button id="logo-remove-btn" class="btn ghost danger">Quitar logo</button>
+					</div>
+
+					<!-- Tips -->
+					<div class="panel">
+						<h2>Textos rotativos</h2>
+						<p class="hint">Consejos/avisos que rotan arriba a la izquierda.</p>
+						<div id="tip-list" class="tip-list"></div>
+						<button id="tip-add-btn" class="btn secondary">+ Agregar texto</button>
+					</div>
+
+					<!-- Timing -->
+					<div class="panel">
+						<h2>Tiempos</h2>
+						<label class="field">
+							<span>Duracion de cada imagen (segundos)</span>
+							<input id="slide-duration" type="number" min="2" step="1" />
+						</label>
+						<label class="field">
+							<span>Duracion de cada texto (segundos)</span>
+							<input id="tip-duration" type="number" min="2" step="1" />
+						</label>
+					</div>
+				</div>
+
+				<div class="column preview-column">
+					<div class="panel preview-panel">
+						<h2>Vista previa en vivo</h2>
+						<p class="hint">Asi se va a ver en el juego (los cambios sin guardar tambien se muestran).</p>
+						<div class="preview-frame">
+							<iframe id="preview-frame" src="preview/index.html" title="Vista previa"></iframe>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+	</div>
+
+	<div id="toast" class="hidden"></div>
+
+	<script src="site.config.js"></script>
+	<script src="app.js"></script>
+</body>
+</html>
