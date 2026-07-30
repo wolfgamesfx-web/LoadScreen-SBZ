@@ -110,12 +110,19 @@
 	//  GitHub API
 	// ===================================================================
 	async function gh(path, options) {
-		const response = await fetch(`${API}/repos/${CFG.owner}/${CFG.repo}${path}`, Object.assign({
-			headers: Object.assign({
-				Authorization: `token ${token}`,
-				Accept: 'application/vnd.github+json'
-			}, (options && options.headers) || {})
-		}, options));
+		options = options || {};
+
+		// Build the headers separately and apply them AFTER spreading
+		// `options`, otherwise `options.headers` (e.g. the Content-Type on
+		// PUT/DELETE calls) would overwrite this and silently drop the
+		// Authorization header, causing "401: Requires authentication" only
+		// on write requests while GET requests kept working fine.
+		const headers = Object.assign({
+			Authorization: `token ${token}`,
+			Accept: 'application/vnd.github+json'
+		}, options.headers || {});
+
+		const response = await fetch(`${API}/repos/${CFG.owner}/${CFG.repo}${path}`, Object.assign({}, options, { headers }));
 
 		if (!response.ok) {
 			let detail = '';
