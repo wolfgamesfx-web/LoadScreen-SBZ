@@ -7,8 +7,8 @@
 // the panel, and raw.githubusercontent.com/jsDelivr serve the assets
 // straight out of it), but it doesn't have to be.
 window.SITE_CONFIG = {
-	owner: 'your-github-username',
-	repo: 'your-loadscreen-panel-repo',
+	owner: 'wolfgamesfx-web',
+	repo: 'LoadScreen-SBZ',
 	branch: 'main',
 
 	// Path (inside the repo) to the JSON file the loading screen reads.
