@@ -1,11 +1,18 @@
 {
-  "images": [],
+  "images": [
+    "https://raw.githubusercontent.com/wolfgamesfx-web/LoadScreen-SBZ/main/assets/images/image-4-1785456093899.png",
+    "https://raw.githubusercontent.com/wolfgamesfx-web/LoadScreen-SBZ/main/assets/images/image-2-1785456100069.png",
+    "https://raw.githubusercontent.com/wolfgamesfx-web/LoadScreen-SBZ/main/assets/images/image-1-1785456106233.png",
+    "https://raw.githubusercontent.com/wolfgamesfx-web/LoadScreen-SBZ/main/assets/images/image-3-1785456113140.png"
+  ],
   "song": {
-    "url": "",
+    "url": "https://raw.githubusercontent.com/wolfgamesfx-web/LoadScreen-SBZ/main/assets/audio/trueno-milo-j-pumas-official-video-1785456084094.m4a",
     "volume": 0.12
   },
-  "logo": "",
-  "slideDurationMs": 7000,
-  "tips": [],
+  "logo": "https://raw.githubusercontent.com/wolfgamesfx-web/LoadScreen-SBZ/main/assets/images/logo-reen-1785456054558.png",
+  "slideDurationMs": 6000,
+  "tips": [
+    "Server de Film by ShotByWolf & Reenz"
+  ],
   "tipDurationMs": 6000
 }
