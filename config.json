@@ -1,12 +1,13 @@
 {
   "images": [
-    "https://raw.githubusercontent.com/wolfgamesfx-web/LoadScreen-SBZ/main/assets/images/image-4-1785456093899.png",
     "https://raw.githubusercontent.com/wolfgamesfx-web/LoadScreen-SBZ/main/assets/images/image-2-1785456100069.png",
     "https://raw.githubusercontent.com/wolfgamesfx-web/LoadScreen-SBZ/main/assets/images/image-1-1785456106233.png",
-    "https://raw.githubusercontent.com/wolfgamesfx-web/LoadScreen-SBZ/main/assets/images/image-3-1785456113140.png"
+    "https://raw.githubusercontent.com/wolfgamesfx-web/LoadScreen-SBZ/main/assets/images/image-5-1785870369280.png",
+    "https://raw.githubusercontent.com/wolfgamesfx-web/LoadScreen-SBZ/main/assets/images/image-6-1785870375605.png",
+    "https://raw.githubusercontent.com/wolfgamesfx-web/LoadScreen-SBZ/main/assets/images/content-1-1785870401429.png"
   ],
   "song": {
-    "url": "https://raw.githubusercontent.com/wolfgamesfx-web/LoadScreen-SBZ/main/assets/audio/trueno-milo-j-pumas-official-video-1785456084094.m4a",
+    "url": "https://raw.githubusercontent.com/wolfgamesfx-web/LoadScreen-SBZ/main/assets/audio/cana-da-choque-spotdown-org-1785870411429.mp3",
     "volume": 0.12
   },
   "logo": "https://raw.githubusercontent.com/wolfgamesfx-web/LoadScreen-SBZ/main/assets/images/logo-reen-1785456054558.png",
